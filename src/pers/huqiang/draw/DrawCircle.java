@@ -55,12 +55,12 @@ class Mypanel extends JPanel {
         //g.fillOval(10, 10, 100, 100);
         //画图片
         //1.加载图片资源,/bg.png  表示在该项目的根目录获取图片资源
-        //Image image = Toolkit.getDefaultToolkit().getImage(Panel.class.getResource("/bg.png"));
-        //g.drawImage(image,10, 10, 175, 221, this);
+        Image image = Toolkit.getDefaultToolkit().getImage(Panel.class.getResource("/bg.png"));
+        g.drawImage(image,10, 10, 175, 221, this);
         //画字符串，给画笔设置颜色和字体
-        g.setColor(Color.red);
-        g.setFont(new Font("隶书", Font.BOLD, 50));
-        g.drawString("北京你好", 100, 100);//100，100点位是字符串左下角
+        //g.setColor(Color.red);
+        //g.setFont(new Font("隶书", Font.BOLD, 50));
+        //g.drawString("北京你好", 100, 100);//100，100点位是字符串左下角
 
 
     }
