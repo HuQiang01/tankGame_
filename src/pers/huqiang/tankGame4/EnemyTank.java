@@ -20,6 +20,27 @@ public class EnemyTank extends Tank implements Runnable {
     @Override
     public void run() {
         while (true) {
+            //这里我们判断如果shots.size < 1,创建一颗子弹放入到shots集合中
+            if (isLive && shots.size() < 1) {
+                Shot s = null;
+                //根据坦克方向创建子弹
+                switch (getDirect()) {
+                    case 0:
+                        s = new Shot(getX() + 20, getY(),0);
+                        break;
+                    case 1:
+                        s = new Shot(getX() + 60, getY() + 20,1);
+                        break;
+                    case 2:
+                        s = new Shot(getX() + 20, getY() + 60,0);
+                        break;
+                    case 3:
+                        s = new Shot(getX(), getY() + 20,3);
+                        break;
+                }
+                shots.add(s);
+                new Thread(s).start();
+            }
             //根据tank方向继续移动
             switch (getDirect()) {
                 case 0://上

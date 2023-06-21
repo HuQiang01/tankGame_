@@ -11,6 +11,7 @@ public class Tank {
     private int y;//坦克纵坐标
     private int direct;//表示坦克方向 0上 1右 2下 3左
     private int speed = 1;//表示tank的速度
+    boolean isLive = true;
 
     //上右下左移动
     public void moveUp() {
